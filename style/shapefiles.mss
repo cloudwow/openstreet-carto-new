@@ -11,8 +11,7 @@
   }
 }
 
-#ocean-lz,
-#ocean {
+.ocean {
   polygon-fill: @water-color;
 }
 
