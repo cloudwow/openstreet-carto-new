@@ -444,54 +444,6 @@ Then all three layers are added to the rendering with comp-op: darken, so that t
     line-clip: false;
   }
 }
-
-#admin-text[zoom >= 11][way_pixels >= 196000] {
-  [admin_level = '1'][way_pixels >= 360000],
-  [admin_level = '2'][way_pixels >= 360000],
-  [zoom >= 11][admin_level = '3'],
-  [zoom >= 11][admin_level = '4'],
-  [zoom >= 11][admin_level = '5'],
-  [zoom >= 12][admin_level = '6'],
-  [zoom >= 13][admin_level = '7'],
-  [zoom >= 14][admin_level = '8'],
-  [zoom >= 15][admin_level = '9'],
-  [zoom >= 16] {
-    text-name: "[name]";
-    text-face-name: @book-fonts;
-    text-fill: @state-labels;
-    [admin_level = '6'] { text-fill: @county-labels; }
-    text-halo-radius: @standard-halo-radius;
-    text-halo-fill: @standard-halo-fill;
-    text-largest-bbox-only: false;
-    text-placement: line;
-    text-spacing: 750;
-    text-repeat-distance: 250;
-    text-margin: 10;
-    text-clip: true;
-    text-vertical-alignment: middle;
-    text-dy: -10;
-  }
-}
-
-#protected-areas-text[zoom >= 13][way_pixels > 192000] {
-  text-name: "[name]";
-  text-face-name: @book-fonts;
-  text-fill: @protected-area;
-  [boundary='aboriginal_lands'] {
-    text-fill: @aboriginal;
-  }
-  text-halo-radius: @standard-halo-radius;
-  text-halo-fill: @standard-halo-fill;
-  text-largest-bbox-only: false;
-  text-placement: line;
-  text-spacing: 750;
-  text-repeat-distance: 250;
-  text-margin: 10;
-  text-clip: true;
-  text-vertical-alignment: middle;
-  text-dy: -10;
-}
-
 #protected-areas {
   [way_pixels > 750] {
     [zoom >= 8][zoom < 10] {
