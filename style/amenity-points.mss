@@ -1613,9 +1613,6 @@
   [feature = 'amenity_nightclub'] {
   }
 
-  [feature = 'amenity_public_bath'][zoom >= 17] {
-  }
-  #amenity-line {
   // Ford tagging on ways
   [feature = 'highway_ford'][zoom >= 16] {
     marker-file: url('symbols/highway/ford.svg');
@@ -1664,8 +1661,6 @@
   }
 }
 
-#text-line {
- }
 
 #trees [zoom >= 16] {
   ::canopy {
